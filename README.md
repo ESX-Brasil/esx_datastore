@@ -1,42 +1,42 @@
 # esx_datastore
 
-## Download & Installation
+## Download e Instalação
 
-### Using [fvm](https://github.com/qlaffont/fvm-installer)
+### Usando [fvm](https://github.com/qlaffont/fvm-installer)
 ```
-fvm install --save --folder=esx esx-org/esx_datastore
+fvm install --save --folder=esx ESX-Brasil/esx_datastore
 ```
 
-### Using Git
+### Usando o Git
 ```
 cd resources
-git clone https://github.com/ESX-Org/esx_datastore [esx]/esx_datastore
+git clone https://github.com/ESX-Brasil/esx_datastore [esx]/esx_datastore
 ```
 
-### Manually
-- Download https://github.com/ESX-Org/esx_datastore/archive/master.zip
-- Put it in the `[esx]` directory
+### Manualmente
+- Download https://github.com/ESX-Brasil/esx_datastore/archive/master.zip
+- Coloque-o no diretório `[esx]`
 
-## Installation
-- Import `esx_datastore.sql` in your database
-- Add this in your `server.cfg`:
+## Instalação
+- Importe o `esx_datastore.sql` em seu banco de dados
+- Adicione isto em seu `server.cfg`:
 
 ```
 start esx_datastore
 ```
 
-## Usage
-There are two types of datastores: shared and not shared.
+## Uso
+Existem dois tipos de armazenamento de dados: compartilhados e não compartilhados.
 
-- Shared datastores does not belong to a specific user, Example: police armory
-- None-shared datastores are created for every user in the server. They are created in db when player is loaded, Example: property (weapons, dressing).
+- Os armazenamentos de dados compartilhados não pertencem a um usuário específico. Exemplo: arsenal de polícia
+- Os armazenamentos de dados sem nenhum compartilhamento são criados para cada usuário no servidor. Eles são criados em db quando o jogador é carregado, Exemplo: propriedade (armas, vestir).
 
-### `datastore` database information
-An datastore must be configured in the database before using it. Don't forget to run a server restart afterwards (you can alternative restart the script and relog all clients)
+### `datastore` informação do banco de dados
+Um datastore deve ser configurado no banco de dados antes de usá-lo. Não esqueça de executar uma reinicialização do servidor depois (você pode alternativamente reiniciar o script e relogar todos os clientes)
 
-| `name`   | `label` | `shared` |
+| `nome`   | `rótulo` | `compartilhado` |
 | -------- | ------- | -------- |
-| name of the datastore | label of the datastore (not used) | is the datastore shared with others? (boolean either `0` or `1`) |
+| nome do armazenamento de dados | rótulo do armazenamento de dados (não usado) | o armazenamento de dados é compartilhado com outras pessoas? (booleano ou `0` ou` 1`) |
 
 ```lua
 TriggerEvent('esx_datastore:getSharedDataStore', 'police', function(store)
@@ -55,7 +55,7 @@ end)
 ### License
 esx_datastore - datastore inventory for ESX
 
-Copyright (C) 2015-2018 Jérémie N'gadi
+Copyright (C) 2015-2019 Jérémie N'gadi
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
