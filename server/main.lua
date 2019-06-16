@@ -1,3 +1,5 @@
+--ESX-Brasil
+
 local DataStores, DataStoresIndex, SharedDataStores = {}, {}, {}
 ESX = nil
 

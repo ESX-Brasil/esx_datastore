@@ -1,3 +1,5 @@
+--ESX-Brasil
+
 function stringsplit(inputstr, sep)
 	if sep == nil then
 		sep = "%s"
